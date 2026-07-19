@@ -43,13 +43,13 @@ https://github.com/web3senior/huptrade
 
 ## Category
 
-testnet (Monad Testnet, chainId 10143)
+mainnet (Monad Mainnet, chainId 143)
 
 ## Contract address
 
-0xC2b7f6eDecE9E5aB04C296a02bf61054487812e5
+0x80218c06A00316687957951036bbD1326a6790C1
 
-https://testnet.monadexplorer.com/address/0xC2b7f6eDecE9E5aB04C296a02bf61054487812e5
+https://monadexplorer.com/address/0x80218c06A00316687957951036bbD1326a6790C1
 
 ## Demo video
 
@@ -62,7 +62,7 @@ TODO — upload and paste URL. Suggested 3-minute shot list:
 4. (1:30) Switch to a second account → click Buy → transaction confirms → NFT in
    buyer's wallet, seller gets the "NFT sold" notification.
 5. (2:15) Flash the explorer page of the Sold event + the referral payout, close with
-   "non-custodial, one contract, ERC721 + LSP8, live on Monad testnet."
+   "non-custodial, one contract, ERC721 + LSP8, live on Monad mainnet."
 
 ## Social media post URL (Most Viral prize)
 
@@ -84,14 +84,13 @@ seller's wallet (approval-only), re-verifies ownership and transfer rights at
 settlement, splits payment between seller, an optional platform fee, and an optional
 referral share for the reposter who surfaced the listing — so sharing a listing is
 incentivized, and the sale completes exactly where the interest happened. Live on
-Monad testnet, indexed by our open event indexer, running inside hup.social today.
+Monad mainnet, indexed by our open event indexer, running inside hup.social today.
 
 ---
 
 ## Remaining manual steps
 
-- [ ] Create the public GitHub repo and push:
-      `git remote add origin git@github.com:web3senior/huptrade.git && git push -u origin main`
+- [x] Create the public GitHub repo and push (github.com/web3senior/huptrade).
 - [ ] Cover image (PNG/JPEG/WebP, max 5 MB) — a TradeCard screenshot inside a post works well.
 - [ ] Record + upload the demo video (≤3 min), paste URL above and in the form.
 - [ ] Publish the social post (on Hup + X), paste URL in the form.

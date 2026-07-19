@@ -4,8 +4,8 @@
 
 Built by [Hup Labs](https://hup.social) for the **Spark hackathon** (BuildAnything × Monad, Jul 13–19, 2026).
 
-- **Live app:** https://hup.social (connect a wallet, switch to Monad Testnet)
-- **Contract (Monad Testnet, chainId 10143):** [`0xC2b7f6eDecE9E5aB04C296a02bf61054487812e5`](https://testnet.monadexplorer.com/address/0xC2b7f6eDecE9E5aB04C296a02bf61054487812e5)
+- **Live app:** https://hup.social (connect a wallet, switch to Monad)
+- **Contract (Monad Mainnet, chainId 143):** [`0x80218c06A00316687957951036bbD1326a6790C1`](https://monadexplorer.com/address/0x80218c06A00316687957951036bbD1326a6790C1)
 - **Main app monorepo (public):** https://github.com/web3senior/hupsocial
 
 ## The problem (a personal one)
@@ -25,7 +25,7 @@ No escrow, no custody, no order book. If you transfer the NFT away or revoke app
 
 ## Why Monad
 
-Listing, updating, cancelling, and buying are all everyday social actions here, not rare marketplace ceremonies. That only feels natural when transactions confirm fast and cost effectively nothing — which is what Monad testnet delivers. The same contract is multichain by design (it also runs on LUKSO mainnet supporting LSP7/LSP8), but Monad is where "commerce as a post" feels like posting.
+Listing, updating, cancelling, and buying are all everyday social actions here, not rare marketplace ceremonies. That only feels natural when transactions confirm fast and cost effectively nothing — which is what Monad delivers. The same contract is multichain by design (it also runs on LUKSO mainnet supporting LSP7/LSP8), but Monad is where "commerce as a post" feels like posting.
 
 ## Architecture
 
@@ -35,7 +35,7 @@ flowchart LR
     Composer["Post composer\nSellNftModal"]
     Feed["Feed\nTradeCard"]
   end
-  subgraph Chain["Monad Testnet"]
+  subgraph Chain["Monad Mainnet"]
     Trade["HupTrade.sol"]
     Core["Hup Core\n(burner session resolution)"]
     NFT["ERC721 / LSP8\ncollection"]
@@ -96,12 +96,12 @@ forge build --contracts contracts
 
 | Chain | Chain id | HupTrade | Hup Core |
 | --- | --- | --- | --- |
-| Monad Testnet | 10143 | [`0xC2b7f6eDecE9E5aB04C296a02bf61054487812e5`](https://testnet.monadexplorer.com/address/0xC2b7f6eDecE9E5aB04C296a02bf61054487812e5) | `0xddA507aFA7bE1e70B9dceEB3B34c9B886C98Ff73` |
+| Monad Mainnet | 143 | [`0x80218c06A00316687957951036bbD1326a6790C1`](https://monadexplorer.com/address/0x80218c06A00316687957951036bbD1326a6790C1) | `0x8b76923EA3BFAA8EB29FC58e81E49F3c4Fa9Ba8A` |
 | LUKSO Mainnet | 42 | `0x4bad88a02d8a4926fE50F69A12A3e095E433CEc0` | `0xf6eeC4e32a532b23ACC56b72865e79c79877CEc8` |
 
 ## Try it (3 minutes)
 
-1. Open https://hup.social and connect a wallet on **Monad Testnet** (grab MON from the faucet if needed).
+1. Open https://hup.social and connect a wallet on **Monad** (you'll need a little MON for gas).
 2. Start a new post → choose the **Sell NFT** action in the composer toolbar.
 3. Pick a collection + token you own, set a price (MON or a custom token), optionally a referral share, and approve + list.
 4. Publish. The post now renders a TradeCard; from another account, hit **Buy** and watch the NFT and payment settle in one transaction — the seller gets an "NFT sold" notification.
